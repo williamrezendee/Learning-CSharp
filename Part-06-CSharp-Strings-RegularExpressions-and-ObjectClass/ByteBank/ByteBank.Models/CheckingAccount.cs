@@ -103,5 +103,10 @@ namespace ByteBank.Models
 
             destinyAccount.Deposit(value);
         }
+
+        public override string ToString()
+        {
+            return $"Account {AccountNumber}, Agency {AgencyNumber}, Balance {Balance}";
+        }
     }
 }

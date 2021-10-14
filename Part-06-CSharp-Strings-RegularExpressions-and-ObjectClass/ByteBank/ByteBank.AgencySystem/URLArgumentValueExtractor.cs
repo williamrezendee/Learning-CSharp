@@ -25,8 +25,11 @@ namespace ByteBank.AgencySystem
 
         public string GetArgumentValue(string parameterName)
         {
+            parameterName = parameterName.ToUpper();
+            string capsLockArgument = _arguments.ToUpper();
+            
             string term = parameterName + "=";
-            int termIndex = _arguments.IndexOf(term);
+            int termIndex = capsLockArgument.IndexOf(term);
             string value = _arguments.Substring(termIndex + term.Length);
             int ampersand = value.IndexOf('&');
             if (ampersand == -1)
