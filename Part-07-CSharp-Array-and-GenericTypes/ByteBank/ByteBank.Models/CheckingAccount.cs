@@ -108,5 +108,16 @@ namespace ByteBank.Models
         {
             return $"Account {AccountNumber}, Agency {AgencyNumber}, Balance {Balance}";
         }
+
+        public override bool Equals(object obj)
+        {
+            CheckingAccount other = obj as CheckingAccount;
+            if (other == null)
+            {
+                return false;
+            }
+
+            return AccountNumber == other.AccountNumber && AgencyNumber == other.AgencyNumber;
+        }
     }
 }

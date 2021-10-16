@@ -13,25 +13,49 @@ namespace ByteBank.AgencySystem
     {
         static void Main(string[] args)
         {
-            CheckingAccountList list = new CheckingAccountList();
-
-            CheckingAccount williamAccount = new CheckingAccount(456, 345890);
-
-            list.Add(new CheckingAccount(456, 456789));
-            list.Add(new CheckingAccount(456, 456123));
-            list.Add(new CheckingAccount(456, 456234));
-            list.Add(new CheckingAccount(456, 123456));
-            list.Add(new CheckingAccount(456, 987654));
-            list.Add(new CheckingAccount(456, 345234));
-            list.Add(new CheckingAccount(456, 556677));
-            list.Add(new CheckingAccount(456, 889900));
-            list.Add(new CheckingAccount(456, 443322));
-            list.Add(new CheckingAccount(456, 112233));
-            list.Add(williamAccount);
-
-            list.Remove(williamAccount); // The Method need to be implemented.
+            Console.WriteLine(SumSeveralNumbers(1, 2, 3, 4, 5, 6, 7, 8));
+            
         }
 
+        static int SumSeveralNumbers(params int[] numbers)
+        {
+            int sum = 0;
+            foreach (int number in numbers)
+            {
+                sum += number;
+            }
+            return sum;
+        }
+
+        static void CheckingAccountListTester()
+        {
+            CheckingAccountList list = new CheckingAccountList();
+
+            CheckingAccount williamAccount = new CheckingAccount(111, 111111);
+
+            CheckingAccount[] accounts = new CheckingAccount[]
+            {
+                williamAccount,
+                new CheckingAccount(456, 456789),
+                new CheckingAccount(456, 456123)
+            };
+
+            list.AddSeveralAccounts(accounts);
+
+            list.AddSeveralAccounts(
+                williamAccount,
+                new CheckingAccount(456, 456789),
+                new CheckingAccount(456, 456123)
+            );
+
+            for (int i = 0; i < list.Length; i++)
+            {
+                CheckingAccount currentAccount = list[i];
+                Console.WriteLine($"Account {i} = {currentAccount.AgencyNumber} / {currentAccount.AccountNumber}");
+            }
+
+            list.Remove(williamAccount);
+        }
         static void ArrayTestCheckingAccount()
         {
             CheckingAccount[] accounts = new CheckingAccount[]
