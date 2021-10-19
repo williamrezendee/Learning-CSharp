@@ -13,8 +13,34 @@ namespace ByteBank.AgencySystem
     {
         static void Main(string[] args)
         {
+            GenericList<int> ages = new GenericList<int>();
+
+            ages.Add(10);
+            ages.AddSeveralItems(1, 5, 78);
+
+            for (int i = 0; i < ages.Length; i++)
+            {
+                int currentAge = ages[i];
+            }
+
+            Console.ReadLine();
+        }
+        
+        static void IntegerListTester()
+        {
+            ObjectList agesList = new ObjectList();
+
+            agesList.Add(10);
+            agesList.Add(5);
+            agesList.Add(4);
+            agesList.AddSeveralItems(16, 23, 60);
+
+            for (int i = 0; i < agesList.Length; i++)
+            {
+                int age = (int)agesList[i];
+                Console.WriteLine($"Age on {i} index: {age}");
+            }
             Console.WriteLine(SumSeveralNumbers(1, 2, 3, 4, 5, 6, 7, 8));
-            
         }
 
         static int SumSeveralNumbers(params int[] numbers)
