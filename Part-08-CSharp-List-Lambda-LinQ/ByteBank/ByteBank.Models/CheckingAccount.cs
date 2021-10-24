@@ -9,7 +9,7 @@ namespace ByteBank.Models
     /// <summary>
     /// Define a Checking Account of the ByteBank.
     /// </summary>
-    public class CheckingAccount
+    public class CheckingAccount : IComparable
     {
         public static int OperationTax { get; private set; }
         public static int TotalAccountsCreated { get; private set; }
@@ -118,6 +118,27 @@ namespace ByteBank.Models
             }
 
             return AccountNumber == other.AccountNumber && AgencyNumber == other.AgencyNumber;
+        }
+
+        public int CompareTo(object obj)
+        {
+            var otherAccount = obj as CheckingAccount;
+
+            if (otherAccount == null)
+            {
+                return -1;
+            }
+
+            if (AccountNumber < otherAccount.AccountNumber)
+            {
+                return -1;
+            }
+            if (AccountNumber == otherAccount.AccountNumber)
+            {
+                return 0;
+            }
+
+            return 1;
         }
     }
 }

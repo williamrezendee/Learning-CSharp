@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using ByteBank.Models;
 using ByteBank.Models.Employees;
 using ByteBank.AgencySystem.Extensions;
+using ByteBank.AgencySystem.Comparers;
 
 namespace ByteBank.AgencySystem
 {
@@ -14,7 +15,48 @@ namespace ByteBank.AgencySystem
     {
         static void Main(string[] args)
         {
-            List<int> ages = new List<int>();
+            var accounts = new List<CheckingAccount>()
+            {
+                new CheckingAccount(321, 456789),
+                null,
+                new CheckingAccount(322, 234567),
+                new CheckingAccount(320, 123456),
+                null,
+                null,
+                new CheckingAccount(315, 456123)
+            };
+
+            var ordenadedAccounts = accounts
+                .Where(account => account != null)
+                .OrderBy(account => account.AgencyNumber);
+
+            foreach (var account in ordenadedAccounts)
+            {
+                Console.WriteLine($"Account number {account.AccountNumber}, ag. {account.AgencyNumber}");
+            }
+
+            Console.ReadLine();
+        }
+
+        static void SortMethodTester()
+        {
+            var names = new List<string>()
+            {
+                "William",
+                "Bruna",
+                "Eloa",
+                "Anne"
+            };
+
+            names.Sort();
+
+            foreach (var name in names)
+            {
+                Console.WriteLine(name);
+            }
+
+
+            var ages = new List<int>();
 
             ages.Add(1);
             ages.Add(5);
@@ -25,12 +67,12 @@ namespace ByteBank.AgencySystem
 
             ages.AddSeveral(3, 4, 7);
 
+            ages.Sort();
+
             for (int i = 0; i < ages.Count; i++)
             {
                 Console.WriteLine(ages[i]);
             }
-
-            Console.ReadLine();
         }
         
         static void IntegerListTester()

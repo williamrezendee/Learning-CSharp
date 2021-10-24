@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CheckingAccountList.cs" />
+    <Compile Include="Comparers\CheckingAccountAgencyComparer.cs" />
     <Compile Include="Extensions\ListExtension.cs" />
     <Compile Include="GenericList.cs" />
     <Compile Include="ObjectList.cs" />
