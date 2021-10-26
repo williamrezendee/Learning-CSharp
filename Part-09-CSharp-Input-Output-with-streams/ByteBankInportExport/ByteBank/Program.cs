@@ -12,18 +12,21 @@ namespace ByteBank
     {
         static void Main(string[] args)
         {
-            var fileAddress = "accounts.txt";
+            var lines = File.ReadAllLines("accounts.txt");
+            Console.WriteLine(lines.Length);
 
-            using (var fileStream = new FileStream(fileAddress, FileMode.Open))
-            using (var reader = new StreamReader(fileStream))
+            foreach (var line in lines)
             {
-                while (!reader.EndOfStream)
-                {
-                    var line = reader.ReadLine();
-                    Console.WriteLine(line);
-                }
+                Console.WriteLine(line);
             }
 
+            var bytesFile = File.ReadAllBytes("accounts.txt");
+            Console.WriteLine($"The file 'accounts.txt' has {bytesFile.Length} bytes.");
+
+            Console.ReadLine();
+
+            UseInputStream();
+            Console.WriteLine("Application ended...");
             Console.ReadLine();
         }
     }

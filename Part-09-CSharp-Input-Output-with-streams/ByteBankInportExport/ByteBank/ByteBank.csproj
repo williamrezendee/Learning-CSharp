@@ -43,11 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="2_UsingStreamReader.cs" />
+    <Compile Include="3_CreatingFiles.cs" />
+    <Compile Include="4_BinaryStream.cs" />
+    <Compile Include="5_UsingConsoleInputStream.cs" />
     <Compile Include="Models\CheckingAccount.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UsingFileStream.cs" />
+    <Compile Include="1_UsingFileStream.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
