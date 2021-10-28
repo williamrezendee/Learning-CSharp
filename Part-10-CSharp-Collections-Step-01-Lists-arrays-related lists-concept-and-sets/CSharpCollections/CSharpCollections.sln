@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpCollections", "CSharpCollections\CSharpCollections.csproj", "{9F648434-A3C4-4375-888E-B1B387CC19E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectsLists", "ObjectsLists\ObjectsLists.csproj", "{9F1BA567-363A-4346-949B-311E0F48D9FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadOnlyList", "ReadOnlyList\ReadOnlyList.csproj", "{7718BFE7-C200-4E23-B264-1F2405AB33EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{9F648434-A3C4-4375-888E-B1B387CC19E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F648434-A3C4-4375-888E-B1B387CC19E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F648434-A3C4-4375-888E-B1B387CC19E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F1BA567-363A-4346-949B-311E0F48D9FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F1BA567-363A-4346-949B-311E0F48D9FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F1BA567-363A-4346-949B-311E0F48D9FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F1BA567-363A-4346-949B-311E0F48D9FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7718BFE7-C200-4E23-B264-1F2405AB33EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7718BFE7-C200-4E23-B264-1F2405AB33EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7718BFE7-C200-4E23-B264-1F2405AB33EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7718BFE7-C200-4E23-B264-1F2405AB33EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
