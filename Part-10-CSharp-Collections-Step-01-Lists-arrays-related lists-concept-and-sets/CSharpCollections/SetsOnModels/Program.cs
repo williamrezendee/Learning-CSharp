@@ -49,9 +49,27 @@ namespace SetsOnModels
             Console.WriteLine($"{nameof(vanessa)} is equals to {nameof(tonini)}?");
             Console.WriteLine(vanessa.Equals(tonini));
 
-            
+            // Limpando o console
+            Console.Clear();
 
+            // Agora com o método que sabe se o aluno está matriculado
+            // podemos buscar um determinado aluno pelo número de matrícula
+            Console.WriteLine("Who is the student with 5617 registration number?");
+            Student student5617 = csharpCollections.FindRegistration(34672);
+            Console.WriteLine($"Student5617: {student5617}");
 
+            Console.WriteLine("Who is the student with 5618 registration number?");
+            Console.WriteLine(csharpCollections.FindRegistration(5618));
+
+            // Tentando adicionar um aluno que tenha a mesma matricula de Vanessa Tonini
+            Student fabio = new Student("Fabio Gushijen", 34672);
+            //csharpCollections.Enroll(fabio);
+
+            // Trocando um aluno que tem uma chave igual a outro já registrado
+            csharpCollections.ChangeStudent(fabio);
+            Console.WriteLine("Who is the student with 5617 registration number?");
+            student5617 = csharpCollections.FindRegistration(34672);
+            Console.WriteLine($"Student5617: {student5617}");
         }
     }
 }

@@ -10,6 +10,7 @@ namespace SetsOnModels
     class Course
     {
         private ISet<Student> _students = new HashSet<Student>();
+        private IDictionary<int, Student> _studentsDictionary = new Dictionary<int, Student>();
 
         public IList<Student> Students
         {
@@ -67,6 +68,7 @@ namespace SetsOnModels
         internal void Enroll(Student student)
         {
             _students.Add(student);
+            _studentsDictionary.Add(student.Registration, student);
         }
 
         public override string ToString()
@@ -79,5 +81,16 @@ namespace SetsOnModels
             return _students.Contains(student);
         }
 
+        internal Student FindRegistration(int registration)
+        {
+            Student student;
+            _studentsDictionary.TryGetValue(registration, out student);
+            return student;
+        }
+
+        internal void ChangeStudent(Student student)
+        {
+            _studentsDictionary[student.Registration] = student;
+        }
     }
 }
