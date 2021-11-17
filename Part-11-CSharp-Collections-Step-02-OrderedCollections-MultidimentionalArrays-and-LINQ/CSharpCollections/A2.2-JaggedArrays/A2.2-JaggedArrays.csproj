@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{50856138-BDF4-44DF-BFBD-1F15BE1748B3}</ProjectGuid>
+    <ProjectGuid>{BCA97C69-8444-44B8-B376-D3C588189CD0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_01_OrderedCollections</RootNamespace>
-    <AssemblyName>01_OrderedCollections</AssemblyName>
+    <RootNamespace>A2._2_JaggedArrays</RootNamespace>
+    <AssemblyName>A2.2-JaggedArrays</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
